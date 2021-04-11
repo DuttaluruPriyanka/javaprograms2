@@ -1,40 +1,37 @@
 class StudentClass
+{ 
+  private String studenttype;
+  private String labname;
+  public student(String studenttype,String labname)
 {
-public void display()
-{
-System.out.println("class");
+this.studenttype=studenttype;
+this.labname=labname;
 }
+  void display()
+  {
+ System.out.println("student tupe is:"+studenttype);
+    System.out.println("lab name:"+labname);
+  }
 }
-class ScienceStudent extends StudentClass
+
+class college extends StudentClass
 {
-private String practical;
-public  ScienceStudent(String practical)
+public college(String studenttype,String labname)
 {
-this.practical=practical;
-}
-public void display()
-{
-System.out.println(" Science student add practical");
-}
-}
-class ArtStudent extends StudentClass
-{
-private String project;
-public  ArtStudent(String project)
-{
-this.project=project;
+super(studenttype,labname);
 }
 public void display()
 {
-System.out.println(" Art student add projects");
+super.display();
 }
 }
+
 class Pdemo
 {
 public  static void  main(String a[])
 {
-StudentClass p1=new ScienceStudent("practical");
-StudentClass p2=new ArtStudent("project");
+StudentClass p1=new college("science student","practicals");
+StudentClass p2=new collage("art student ","project");
 p1.display();
 p2.display();
 }
